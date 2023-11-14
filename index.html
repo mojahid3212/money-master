@@ -1,19 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    
 </head>
-<body>
+
+<body class="w-3/4 mx-auto">
     <header>
-        <h1>Welcome to the money master</h1>
+        <h1 class="text-6xl font-bold text-center text-blue-400 mb-12">Money Saving and expenses💰</h1>
     </header>
     <main>
+        <section >
+            <div class="grid grid-cols-2 gap-4">
+                <div>
+                    <img src="photo/calculate.jpg" alt="">
+                </div>
+                <!-- ... -->
+                <div class=" text-center mx-auto">
+                    <h3 class="text-center text-4xl font-semibold mb-2">Income</h3>
+                    <div class="flex mt-4 ">
+                        <span
+                            class="text-3xl font-bold border border-1 border-solid border-blue-500 rounded bg-blue-400 mt-2 px-12 text-white py-4">Income:
+                        </span>
+                        <input class="text-center text-2xl border border-1 border-solid border-blue-200 py-2 px-8 mt-2 "
+                            placeholder="your Income" type="text" name="" id="income-field">
+                    </div>
+                    <h3 class="text-center text-4xl font-semibold mb-2 mt-8">expenses</h3>
+                    <div class="flex mt-2">
+                        <span
+                        class="text-3xl font-bold border border-1 border-solid border-blue-500 rounded bg-blue-400 mt-2 px-12 text-white py-4">Food:
+                        </span>
+                        <input class="text-center text-2xl border border-1 border-solid border-blue-200 py-2 px-8 mt-2 "
+                            placeholder="your Food expenses" type="text" name="" id="food-expense-field">
+                    </div>
+                    <div class="flex mt-2">
+                        <span
+                        class="text-3xl font-bold border border-1 border-solid border-blue-500 rounded bg-blue-400 mt-2 px-12 text-white py-4">Rent:
+                        </span>
+                        <input class="text-center text-2xl border border-1 border-solid border-blue-200 py-2 px-8 mt-2 "
+                            placeholder="your Rent expenses" type="text" name="" id="rent-expense-field">
+                    </div>
+                    <div class="flex mt-2">
+                        <span
+                        class="text-3xl font-bold border border-1 border-solid border-blue-500 rounded bg-blue-400 mt-2 px-12 text-white py-4">clothes:
+                        </span>
+                        <input class="text-center text-2xl border border-1 border-solid border-blue-200 py-2 px-8 mt-2 "
+                            placeholder="your clothes expenses" type="text" name="" id="clothes-expense-field">
+                    </div>
+                    <div>
+                        <p id="notify-fail" class="notify bg-green-400 py-2 text-white text-2xl my-4 font-bold">❌Enter Digits of <span
+                                class="text-yellow-300">$$$</span>
+                            Then
+                            calculate</p>
+                        <p id="compare"  class="notify bg-green-400 py-2 text-white text-2xl my-4 font-bold">❌Impossible!!!<span class="text-yellow-300"> Are you
+                                crazy??</span>
+                            Expense can't be greater then income.</p>
+
+                    </div>
+                    <button id="caclculate" class="bg-sky-800 px-10 py-4 text-4xl text-white rounded my-4 "> calculate</button>
+                    <h4 class="text-2xl font-semibold">Total Expenses: <span id="total-expenses"></span>$</h4>
+                    <h4  class="text-2xl font-semibold">balance: <span id="balance"></span>$</h4>
+                    <div class="mb-3">
+                        <span  class="text-2xl font-semibold">Save</span>
+                        <input class="text-center border border-1 border-solid border-blue-200 p-2 mt-2 " type="text" name="save" id="save-percentage">
+                        <span class="text-2xl font-semibold">%</span>
+                    </div>
+                    <!-- ////////Display error message for oercentage input /////////// -->
+                <div>
+                    <p id="notify-percentage" class="notify bg-green-400 py-2 text-white text-2xl my-4 font-bold">❌Enter paracentage <span class="text-yellow-300">between(0-100)</span> Then calculate</p>
+                    <p id="exceed" class="notify bg-green-400 py-2 text-white text-2xl my-4 font-bold">✅your saving amount <span class="text-yellow-300">exceed</span>
+                        the balance you have.</p>
+                </div>
+                <span><button id="save-btn" class="bg-sky-800 px-10 py-3 text-4xl text-white rounded my-4 ">save</button></span>
+
+                <h4 class="text-2xl font-semibold">Saving Amount: <span id="saving"></span>$</h4>
+                <h4 class="text-2xl font-semibold">Remaining Balance: <span id="remaining"></span>$</h4>
+                </div>
+            </div>
+
+        </section>
 
     </main>
-    <footer>
-
-    </footer>
+    <script src="js/calculate.js"></script>
 </body>
+
 </html>
