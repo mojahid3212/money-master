@@ -48,7 +48,7 @@ document.getElementById('save-btn').addEventListener('click',function(){
     const remainingAmount= currentBalanceAmount-savingAmount;
     
 
-    if(savingParcentage>100){
+    if(savingParcentage>100||isNaN(savingParcentage)){
         const notifyPercentage=document.getElementById('notify-percentage');
         notifyPercentage.style.display='block';
     }
